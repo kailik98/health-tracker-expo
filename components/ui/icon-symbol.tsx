@@ -6,7 +6,7 @@ import { ComponentProps } from 'react';
 import { OpaqueColorValue, type StyleProp, type TextStyle } from 'react-native';
 
 type IconMapping = Record<SymbolViewProps['name'], ComponentProps<typeof MaterialIcons>['name']>;
-type IconSymbolName = keyof typeof MAPPING;
+export type IconSymbolName = keyof typeof MAPPING;
 
 /**
  * Add your SF Symbols to Material Icons mappings here.
@@ -18,7 +18,36 @@ const MAPPING = {
   'paperplane.fill': 'send',
   'chevron.left.forwardslash.chevron.right': 'code',
   'chevron.right': 'chevron-right',
-} as IconMapping;
+  // Tab Bar Icons
+  'chart.bar.fill': 'bar-chart',
+  'plus.circle.fill': 'add-circle',
+  'safari.fill': 'explore',
+  'star.fill': 'star',
+  'clock.fill': 'access-time',
+  // Explore Screen
+  'heart.fill': 'favorite',
+  'exclamationmark.triangle.fill': 'warning',
+  // Goals Screen
+  'trash.fill': 'delete',
+  'minus.circle.fill': 'remove-circle',
+  plus: 'add',
+  // History & Detail Screen
+  'face.smiling': 'mood',
+  'cloud.rain.fill': 'cloud',
+  'moon.zzz': 'nights-stay',
+  'bolt.fill': 'bolt',
+  'circle.fill': 'circle',
+  'drop.fill': 'water-drop',
+  'bed.double.fill': 'bed',
+  'figure.walk': 'directions-walk',
+  'calendar.badge.exclamationmark': 'event-busy',
+  'arrow.up': 'arrow-upward',
+  pencil: 'edit',
+  'chevron.left': 'chevron-left',
+  'checkmark.seal.fill': 'verified',
+  target: 'track-changes',
+  calendar: 'event',
+} as any;
 
 /**
  * An icon component that uses native SF Symbols on iOS, and Material Icons on Android and web.
